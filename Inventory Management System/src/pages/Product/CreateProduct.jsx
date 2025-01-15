@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { createProduct } from "../Firebase/FirebaseProduct";
-import Product from "../models/Product";
+import { createProduct } from "../../Firebase/FirebaseProduct";
+import Product from "../../models/Product";
 
 function CreateProduct (){
 const [formData, setFormData] = useState({

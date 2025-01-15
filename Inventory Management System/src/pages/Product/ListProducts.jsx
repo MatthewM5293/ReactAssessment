@@ -1,6 +1,6 @@
 //Show list of products
 import React, { useState, useEffect } from "react";
-import { getProducts, deleteProduct } from "../Firebase/FirebaseProduct";
+import { getProducts, deleteProduct } from "../../Firebase/FirebaseProduct";
 import { Link } from "react-router-dom";
 
 const ViewProduct = () => {

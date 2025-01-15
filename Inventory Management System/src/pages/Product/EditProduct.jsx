@@ -1,9 +1,8 @@
 //edit page for Product passing in Product model
-
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { getProductById, updateProduct } from "../Firebase/FirebaseProduct";
-import Product from "../models/Product";
+import { getProductById, updateProduct } from "../../Firebase/FirebaseProduct";
+import Product from "../../models/Product";
 
 function EditProduct(){
     //get ID passed in
