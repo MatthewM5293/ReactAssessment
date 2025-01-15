@@ -8,13 +8,13 @@
 
 **Results**:
 	After reading over the project I was quickly able to put together a list of steps for how I wanted to complete it:
-		CRUD Functionality; User can view all, add, edit and delete products.
-		Add Firebase database; Using Firestore database for data persistance
-		Add Auth; Using Firebase's authentication (not in final product)
+		CRUD Functionality; The User can view all, add, edit, and delete products.
+		Add Firebase database; Using Firestore database for data persistence
+		Add Auth; Using Firebase's authentication (not in the final product)
 		Deploy to GitHub Pages; What I used to deploy my portfolio website so it was the quickest task.
 		
-	Within 2 hours of this assessment, I was able to achieve the minimum CRUD application with Firebase functionality. I went through most of the Github Pages process once I realized how long authentication would take to setup with firebase as I was cutting close to the 2 hour mark so I decided to focus on deployment instead. Overall I found this assessment to be fun as I have previous experience on these platforms though in different environments. I was able to quickly look things up in the Firebase documentation or look for packages I may need such as the UUID package. Looking back on how I believe that maybe I should've gotten authentication up before working on the app as I would've had to go back and add authentication to the pages and check the auth level for the user: "Customer" or "Manager."
+Within 2 hours of this assessment, I was able to achieve the minimum CRUD application with Firebase functionality. I went through most of the Github Pages process once I realized how long authentication would take to set up with Firebase as I was cutting close to the 2 hour mark so I decided to focus on deployment instead. Overall I found this assessment to be fun as I have previous experience on these platforms though in different environments. I was able to quickly look things up in the Firebase documentation or look for packages I may need such as the UUID package. Looking back on how I believe that maybe I should've gotten authentication up before working on the app as I would've had to go back and add authentication to the pages and check the auth level for the user: "Customer" or "Manager."
 
-    Final product can be found live [here](https://matthewm5293.github.io/ReactAssessment/)
+The final product can be found live [here](https://matthewm5293.github.io/ReactAssessment/)
 
 	
