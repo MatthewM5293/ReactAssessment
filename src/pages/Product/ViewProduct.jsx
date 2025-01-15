@@ -4,7 +4,6 @@ function ViewProduct () {
     return (
         <p>Temp</p>
     );
-    };
-    
-    export default ViewProduct;
-    
+};
+
+export default ViewProduct;

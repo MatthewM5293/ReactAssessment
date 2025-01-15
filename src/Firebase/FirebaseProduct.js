@@ -3,7 +3,7 @@ import { collection, addDoc, getDocs, getDoc, doc, updateDoc, deleteDoc } from "
 
 const productsCollection = collection(db, "products");
 
-export async function createProduct(product){
+export async function createProduct(product) {
     try {
         const docRef = await addDoc(productsCollection, product);
         return docRef.id;
@@ -13,12 +13,12 @@ export async function createProduct(product){
     }
 };
 
-export async function getProducts(){
+export async function getProducts() {
     try {
         const querySnapshot = await getDocs(productsCollection);
         return querySnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
+            id: doc.id,
+            ...doc.data(),
         }));
     } catch (error) {
         console.error("Error fetching products:", error);
@@ -26,7 +26,7 @@ export async function getProducts(){
     }
 };
 
-export async function getProductById(id){
+export async function getProductById(id) {
     try {
         const docRef = doc(db, "products", id);
         const docSnap = await getDoc(docRef);
@@ -37,7 +37,7 @@ export async function getProductById(id){
     }
 };
 
-export async function updateProduct(id, updatedData){
+export async function updateProduct(id, updatedData) {
     try {
         const docRef = doc(db, "products", id);
         await updateDoc(docRef, updatedData);
@@ -47,7 +47,7 @@ export async function updateProduct(id, updatedData){
     }
 };
 
-export async function deleteProduct (id){
+export async function deleteProduct(id) {
     try {
         const docRef = doc(db, "products", id);
         await deleteDoc(docRef);

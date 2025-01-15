@@ -1,13 +1,10 @@
-//edit page for Product passing in Product model
-import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { getProductById, updateProduct } from "../../Firebase/FirebaseProduct";
+import React, { useState } from "react";
+import { createProduct } from "../../Firebase/FirebaseProduct";
 import Product from "../../models/Product";
+import { useNavigate  } from "react-router-dom";
 
-function EditProduct(){
-    //get ID passed in
-    const { id } = useParams();
-
+function CreateProduct (){
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         ProductID: "",
         ProductName: "",
@@ -15,25 +12,13 @@ function EditProduct(){
         ProductPrice: ""
     });
 
-    //add data from passed in ID to front end
-    useEffect(() => {
-        async function fetchProduct(){
-            const product = await getProductById(id);
-            if (product) {
-                setFormData(product); //show if found
-            } else {
-                alert("Product not found"); //show alert if not valid ID
-            }
-        };
-
-        fetchProduct();
-    }, [id]);
-
+    //updates form state
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
+    //validates product
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -46,6 +31,7 @@ function EditProduct(){
         product.validate();
         await createProduct({ ...product });
         alert("Product created successfully!");
+        navigate('/')
         } catch (error) {
         alert(error.message);
         }
@@ -79,4 +65,4 @@ function EditProduct(){
     );
 };
 
-export default EditProduct;
+export default CreateProduct;
