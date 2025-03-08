@@ -5,6 +5,7 @@ import { getProductById, updateProduct } from "../../Firebase/FirebaseProduct";
 import Product from "../../models/Product";
 
 function EditProduct() {
+  const navigate = useNavigate();
   //get ID passed in
   const { id } = useParams();
 
@@ -44,8 +45,9 @@ function EditProduct() {
         parseFloat(formData.ProductPrice)
       );
       product.validate();
-      await createProduct({ ...product });
-      alert("Product created successfully!");
+      await updateProduct(id, { ...product });
+      alert("Product updated successfully!");
+      navigate('/')
     } catch (error) {
       alert(error.message);
     }
@@ -74,7 +76,7 @@ function EditProduct() {
         value={formData.ProductPrice}
         onChange={handleChange}
       />
-      <button type="submit">Create Product</button>
+      <button type="submit">Edit Product</button>
     </form>
   );
 }
